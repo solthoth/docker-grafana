@@ -1,0 +1,10 @@
+version: '2'
+services:
+  dashboard:
+    container_name: grafana
+    image: solthoth/grafana:5.0.4.1
+    ports: 
+      - 3000:3000
+    env_file: .env
+    volumes:
+      - /var/lib/grafana
